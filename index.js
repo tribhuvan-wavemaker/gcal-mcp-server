@@ -4,7 +4,7 @@ import dotenv from "dotenv";
 import { google } from "googleapis";
 import { z } from "zod";
 
-// dotenv.config();
+dotenv.config();
 
 // create the MCP server
 const server = new McpServer({
