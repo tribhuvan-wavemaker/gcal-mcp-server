@@ -1,0 +1,27 @@
+{
+	"servers": {
+		"tribhu-calendar": {
+			"type": "stdio",
+			"command": "node",
+			"args": [
+				"/Users/tribhuvand_500052/Desktop/github/gcal-mcp-server/index.js"
+			],"env": {
+        "GOOGLE_PUBLIC_API_KEY": "${input:google-public-api-key}",
+        "CALENDAR_ID":"${input:calendar}"
+      }
+		}
+	},
+	"inputs": [
+       {
+      "type": "promptString",
+      "id": "google-public-api-key",
+      "description": "Google key",
+      "password": true
+    }, {
+      "type": "promptString",
+      "id": "calendar",
+      "description": "Calendar ID",
+      "password": true
+    }
+      ]
+}
