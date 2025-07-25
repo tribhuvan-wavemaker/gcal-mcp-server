@@ -1,2 +1,4 @@
-#npm i
-#npx @modelcontextprotocol/inspector
+# Installation
+
+npm i
+npx @modelcontextprotocol/inspector
