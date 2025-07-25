@@ -16,8 +16,7 @@ const server = new McpServer({
 async function getMyCalendarDataByDate(date) {
     const calendar = google.calendar({
         version: "v3",
-        auth: process.env.GOOGLE_PUBLIC_API_KEY,
-        // auth : "AIzaSyAPMlPhVZDskm1MVekPoO0KorGrXv2nMTc"
+        auth: process.env.GOOGLE_PUBLIC_API_KEY
     });
 
     // Calculate the start and end of the given date (UTC)
@@ -29,7 +28,6 @@ async function getMyCalendarDataByDate(date) {
     try {
         const res = await calendar.events.list({
             calendarId: process.env.CALENDAR_ID,
-            // calendarId: "tribhuvan.durgam@wavemaker.com",
             timeMin: start.toISOString(),
             timeMax: end.toISOString(),
             maxResults: 10,
