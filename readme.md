@@ -1,6 +1,7 @@
 # Installation
 
 npm i
+
 npx @modelcontextprotocol/inspector
 
 touch .env 
